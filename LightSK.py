@@ -11,7 +11,7 @@ class LightSK:
         for block in blocks:
             encrypted_block = ''
             for i in range(len(block)):
-                encrypted_block += chr(ord(block[i]) ^ ord(key[i % len(key)])
+                encrypted_block += chr(ord(block[i]) ^ ord(key[i % len(key)]))
             encrypted_blocks.append(encrypted_block)
 
             key = self.update_key(key, block)
